@@ -204,8 +204,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             println!("Count: {}", count);
         }
         Commands::Adrules {
-            config_json,
-            append,
+            config_json: _,
+            append: _,
         } => {
             // Placeholder for TypedMessage construction from JSON
             println!(
@@ -222,7 +222,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 println!("{} -> {}", r.tag, r.rule_tag);
             }
         }
-        Commands::Sib { ip } => {
+        Commands::Sib { ip: _ } => {
             println!(
                 "Block IP not fully implemented (requires constructing specific RoutingRule TypedMessage)."
             );
